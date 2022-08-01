@@ -1,5 +1,5 @@
-class StaticController < ApplicationController
-  def homepage
+# frozen_string_literal: true
 
-  end
+class StaticController < ApplicationController
+  def homepage; end
 end
