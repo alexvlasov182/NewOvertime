@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 100.times do |post|
   Post.create!(date: Date.today, rationale: "#{post} rationale content")
 end
