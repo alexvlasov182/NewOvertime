@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
@@ -5,6 +7,7 @@ RSpec.describe Post, type: :model do
     before do
       @post = described_class.create(date: Date.today, rationale: 'Anything')
     end
+
     it 'can be created' do
       expect(@post).to be_valid
     end
@@ -12,7 +15,7 @@ RSpec.describe Post, type: :model do
     it 'cannot be created without a date and rationale' do
       @post.date = nil
       @post.rationale = nil
-      expect(@post).to_not be_valid
+      expect(@post).not_to be_valid
     end
   end
 end
