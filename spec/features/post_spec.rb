@@ -3,14 +3,23 @@
 require 'rails_helper'
 
 describe 'navigate' do
+
+  before do
+    user = User.create(email: 'drumlife182@gmail.com', password: 'drumlife', password_confirmation: 'drumlife', first_name: 'Alex', last_name: 'Vlasov')
+    login_as(user, scope: :user)
+  end
+
   describe 'index' do
-    it 'can be reached successfully' do
+
+    before do
       visit posts_path
+    end
+
+    it 'can be reached successfully' do
       expect(page.status_code).to eq(200)
     end
 
     it 'has a title of Posts' do
-      visit posts_path
       expect(page).to have_content(/Posts/)
     end
   end
@@ -31,6 +40,15 @@ describe 'navigate' do
       click_on 'Save'
 
       expect(page).to have_content('Some rationale')
+    end
+
+    it 'will have a user associated it' do
+      fill_in 'post[date]', with: Date.today
+      fill_in 'post[rationale]', with: 'User Association'
+
+      click_on 'Save'
+
+      expect(User.last.posts.last.rationale).to eq('User Association')
     end
   end
 end
