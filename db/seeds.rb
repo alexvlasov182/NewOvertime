@@ -5,7 +5,7 @@
 
 p '1 User created'
 
-100.times do |post|
+40.times do |post|
   Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id)
 end
 
