@@ -3,9 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   before do
-    @user = FactoryGirl.create(:user)
+    @user = create(:user)
   end
 
   describe 'creation' do
