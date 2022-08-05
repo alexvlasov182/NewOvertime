@@ -5,7 +5,13 @@
 
 p '1 User created'
 
-40.times do |post|
+
+AdminUser.create(email: 'admin@test.com', password: 'asdfasdf', password_confirmation: 'asdfasdf',
+                    first_name: 'Admin', last_name: 'User')
+
+p '1 Admin User created'
+
+100.times do |post|
   Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id)
 end
 
