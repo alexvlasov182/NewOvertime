@@ -1,14 +1,16 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'navigate' do
   before do
-    @admin_user = FactoryGirl.create(:admin_user)
-    login_as(@admin_user, :scope => :user)
+    @admin_user = create(:admin_user)
+    login_as(@admin_user, scope: :user)
   end
 
   describe 'edit' do
     before do
-      @post = FactoryGirl.create(:post)
+      @post = create(:post)
       visit edit_post_path(@post)
     end
 
@@ -19,16 +21,14 @@ describe 'navigate' do
       expect(@post.reload.status).to eq('approved')
     end
 
-
-
     it 'cannot be edited by a non admin' do
       logout(:user)
-      user = FactoryGirl.create(:user)
-      login_as(user, :scope => :user)
+      user = create(:user)
+      login_as(user, scope: :user)
 
       visit edit_post_path(@post)
 
-      expect(page).to_not have_content('Approved')
+      expect(page).not_to have_content('Approved')
     end
   end
 end
