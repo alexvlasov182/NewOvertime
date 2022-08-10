@@ -7,7 +7,17 @@
 .custom-nav {
   margin-top: 15px;
 }
+.index-icon {
+  font-size: 1.3em;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
 
 .delete {
-  color: tomato;
+  &:hover {
+    text-decoration: none;
+    color: #B00100;
+  }
 }
