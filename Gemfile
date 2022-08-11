@@ -44,3 +44,4 @@ gem 'devise', '~> 4.2'
 gem 'gritter', '1.2.0'
 gem 'pundit', '~> 1.1'
 gem 'twilio-ruby', '~> 5.70'
+gem 'dotenv-rails', :group => [:development, :test]
