@@ -18,6 +18,10 @@
   <div>
     <h3><span>Current Status of Approval: </span> <%=	 @post.status %></h3>
   </div>
+
+  <div>
+    <h3><span>Rationale: </span> <%=	 @post.rationale %></h3>
+  </div>
 </div>
 
 <%=	 link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' if policy(@post).update? %>
