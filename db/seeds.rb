@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
-@user = User.create(email: 'drumlife182@gmail.com', password: 'drumlife', password_confirmation: 'drumlife', first_name: 'Alex', last_name: 'Vlasov')
+@user = User.create(email: 'drumlife182@gmail.com', password: 'drumlife', password_confirmation: 'drumlife',
+                    first_name: 'Alex', last_name: 'Vlasov', phone: '9093628233')
 
 p '1 User created'
 
 AdminUser.create(email: 'admin@test.com', password: 'asdfasdf', password_confirmation: 'asdfasdf',
-                 first_name: 'Admin', last_name: 'User')
+                 first_name: 'Admin', last_name: 'User', phone: '9093628233')
 
 p '1 Admin User created'
 

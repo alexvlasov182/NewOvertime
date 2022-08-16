@@ -4,7 +4,6 @@ class PostPolicy < ApplicationPolicy
   def update?
     return true if post_approved? && admin?
     return true if user_or_admin && !post_approved?
-
   end
 
   private
@@ -20,5 +19,4 @@ class PostPolicy < ApplicationPolicy
   def post_approved?
     record.approved?
   end
-
 end

@@ -30,7 +30,8 @@ describe 'navigate' do
 
       expect(page).not_to have_content('Approved')
     end
-    it 'should not be editable by the post creator if status is approved' do
+
+    it 'is not editable by the post creator if status is approved' do
       logout(:user)
       user = create(:user)
       login_as(user, scope: :user)
@@ -39,7 +40,7 @@ describe 'navigate' do
 
       visit edit_post_path(@post)
 
-      expect(current_path).to eq(root_path)
+      expect(page).to have_current_path(root_path, ignore_query: true)
     end
   end
 end
