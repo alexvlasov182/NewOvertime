@@ -45,3 +45,4 @@ gem 'dotenv-rails', group: %i[development test]
 gem 'gritter', '1.2.0'
 gem 'pundit', '~> 1.1'
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
