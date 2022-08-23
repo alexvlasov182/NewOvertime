@@ -13,6 +13,11 @@
   border-radius: 4px;
 }
 
+.homepage-block:hover {
+  background-color: #172b63;
+  cursor: pointer;
+}
+
 .pending-details {
   font-weight: 900;
 }
