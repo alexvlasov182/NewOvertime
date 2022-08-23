@@ -1,0 +1,18 @@
+.index-icon {
+  font-size: 1.8em;
+}
+
+.index-icon {
+  font-size: 1.3em;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.delete {
+  &:hover {
+    text-decoration: none;
+    color: #B00100;
+  }
+}
