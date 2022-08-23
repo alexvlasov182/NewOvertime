@@ -11,7 +11,7 @@ AdminUser.create(email: 'admin@test.com', password: 'asdfasdf', password_confirm
 p '1 Admin User created'
 
 100.times do |post|
-  Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id, overtime_request: 2.5)
+  Post.create!(date: Date.today, rationale: "#{post} RubyGems.org is the Ruby community’s gem hosting service. Instantly publish your gems and then install them. Use the API to find out more about available gems. Become a contributor and improve the site yourself.", user_id: @user.id, overtime_request: 2.5)
 end
 
 p '100 Posts have been created'
