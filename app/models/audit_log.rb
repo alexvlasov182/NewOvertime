@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuditLog < ApplicationRecord
   enum status: { pending: 0, confirmed: 1 }
   belongs_to :user
@@ -7,7 +9,7 @@ class AuditLog < ApplicationRecord
   after_initialize :set_defaults
 
   private
-  
+
   def set_defaults
     self.start_date ||= Date.today - 6.days
   end

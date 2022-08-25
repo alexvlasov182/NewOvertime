@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe 'Homepage' do
-  it 'allows the admin to approve the post homepage' do
-    post = FactoryGirl.create(:post)
+  it 'allows the admin to approve posts from the homepage' do
+    post = create(:post)
     admin_user = create(:admin_user)
     login_as(admin_user, scope: :user)
 
@@ -11,5 +13,19 @@ describe 'Homepage' do
     click_on("approve_#{post.id}")
 
     expect(post.reload.status).to eq('approved')
+  end
+
+  it 'allows the employee to change the audits log status from the homepage' do
+    audit_log = create(:audit_log)
+    user = create(:user)
+    login_as(user, scope: :user)
+
+    audit_log.update(user_id: user.id)
+
+    visit root_path
+
+    click_on("confirm_#{audit_log.id}")
+
+    expect(audit_log.reload.status).to eq('confirmed')
   end
 end

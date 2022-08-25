@@ -31,9 +31,9 @@ RSpec.describe User, type: :model do
 
     it 'requires the phone attr to only contain integers' do
       @user.phone = 'mygreatstr'
-      expect(@user).to_not be_valid
+      expect(@user).not_to be_valid
     end
-   end
+  end
 
   describe 'custom name methods' do
     it 'has a full name method that combines first and last name' do
