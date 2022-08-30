@@ -1,16 +1,15 @@
 # frozen_string_literal: true
 
 module SmsTool
-  account_sid = ENV.fetch('TWILIO_ACCOUNT_SID', nil)
-  auth_token = ENV.fetch('TWILIO_AUTH_TOKEN', nil)
-
-  @client = Twilio::REST::Client.new account_sid, auth_token
+  account_sid = ENV['TWILIO_ACCOUNT_SID']
+  auth_token = ENV['TWILIO_AUTH_TOKEN']
+  @client = Twilio::REST::Client.new(account_sid, auth_token)
 
   def self.send_sms(number:, message:)
     @client.messages.create(
-      from: ENV.fetch('TWILIO_PHONE_NUMBER', nil),
+      messaging_service_sid: ENV['TWILIO_MESSAGING_SERVICE_SID'],
       to: "+4#{number}",
-      body: message.to_s
+      body: "Link for my application: #{message}",
     )
   end
 end
