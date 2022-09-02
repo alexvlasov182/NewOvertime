@@ -9,7 +9,7 @@ module SmsTool
     @client.messages.create(
       messaging_service_sid: ENV['TWILIO_MESSAGING_SERVICE_SID'],
       to: "+4#{number}",
-      body: "Link for my application: #{message}",
+      body: "Link for my application: #{message}"
     )
   end
 end

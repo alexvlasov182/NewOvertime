@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 @employee = Employee.create(email: 'drumlife182@gmail.com', password: 'drumlife', password_confirmation: 'drumlife',
-                    first_name: 'Alex', last_name: 'Vlasov', phone: '8792565877')
+                            first_name: 'Alex', last_name: 'Vlasov', phone: '8792565877')
 
 p '1 User created'
 
@@ -22,4 +22,3 @@ p '3 audit logs have been created'
 end
 
 p '100 Posts have been created'
-

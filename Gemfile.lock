@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/mbuckbee/Real-Email-Gem.git
-  revision: 9d18877888b9f5967b7077224db86b5a40cfeb73
-  specs:
-    real_email (1.0)
-      json_mapper (~> 0.2.1)
-      unirest (~> 1.1.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -127,9 +119,6 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.6)
-    json_mapper (0.2.1)
-      json (>= 1.4.3)
     jwt (1.5.6)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
@@ -153,7 +142,6 @@ GEM
       mini_mime (>= 0.1.1)
     matrix (0.4.2)
     method_source (1.0.0)
-    mime-types (1.25.1)
     mini_mime (1.1.2)
     minitest (5.16.3)
     momentjs-rails (2.29.4.1)
@@ -214,8 +202,6 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
-    rest-client (1.6.14)
-      mime-types (~> 1.16)
     rexml (3.2.5)
     rspec-core (3.9.3)
       rspec-support (~> 3.9.3)
@@ -297,10 +283,6 @@ GEM
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (2.2.0)
-    unirest (1.1.2)
-      addressable (~> 2.3.5)
-      json (~> 1.8.1)
-      rest-client (~> 1.6.7)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (3.7.0)
@@ -340,7 +322,6 @@ DEPENDENCIES
   pundit (~> 1.1)
   rails (~> 5.0.1)
   ransack (~> 2.0.0)
-  real_email!
   rspec-rails (~> 3.0)
   rubocop (~> 1.25.0)
   rubocop-performance (~> 1.0)

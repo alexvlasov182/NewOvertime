@@ -12,6 +12,9 @@ module NewOvertime
     config.autoload_paths << Rails.root.join('lib')
     config.assets.initialize_on_precompile = false
     config.action_controller.permit_all_parameters = true
-    config.secret_key_base = ENV["SECRET_KEY_BASE"]
+    config.secret_key_base = ENV['SECRET_KEY_BASE']
   end
 end
+
+#sender@example.com
+#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
