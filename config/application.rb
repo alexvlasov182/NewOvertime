@@ -15,6 +15,3 @@ module NewOvertime
     config.secret_key_base = ENV['SECRET_KEY_BASE']
   end
 end
-
-#sender@example.com
-#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
