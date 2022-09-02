@@ -26,8 +26,8 @@ Rails.application.configure do
   end
 
   config.action_mailer.smtp_settings = {
-      :user_name => ENV['GMAIL_USERNAME'], # This is the string literal 'apikey', NOT the ID of your API key
-      :password => ENV['GMAIL_PASSWORD'], # This is the secret sendgrid API key which was issued during API key creation
+      :user_name => ENV['GMAIL_USERNAME'],
+      :password => ENV['GMAIL_PASSWORD'],
       :domain => 'gmail.com',
       :address => 'smtp.gmail.com',
       :port => 587,
@@ -35,7 +35,6 @@ Rails.application.configure do
       :enable_starttls_auto => true
   }
 
-  # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { host: 'alexvlasov-overtime.herokuapp.com' }
 end
