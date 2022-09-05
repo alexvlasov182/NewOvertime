@@ -19,10 +19,11 @@ namespace :notification do
     submitted_posts = Post.submitted
 
     admin_users = AdminUser.all
+    employees = Employee.all
 
     if submitted_posts.count.positive?
-      admin_users.each do |admin|
-        ManagerMailer.email(admin).deliver_now
+      employees.each do |employee|
+        ManagerMailer.email(employee).deliver_now
       end
     end
   end
