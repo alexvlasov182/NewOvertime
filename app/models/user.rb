@@ -3,6 +3,9 @@
 class User < ApplicationRecord
   has_many :posts
   has_many :audit_logs
+
+  has_many :hands_associations, class_name: 'Hand'
+  has_many :hands, through: :hands_associations
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -18,3 +21,7 @@ class User < ApplicationRecord
     "#{last_name.upcase}, #{first_name.upcase}"
   end
 end
+
+
+
+admin = AdminUser.create!(email: "admin@test123.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: 'John', last_name: 'Doe', phone: '5555555555')
