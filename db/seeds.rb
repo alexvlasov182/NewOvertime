@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
-@employee = Employee.create(email: 'drumlife182@gmail.com', password: 'drumlife', password_confirmation: 'drumlife',
-                            first_name: 'Alex', last_name: 'Vlasov', phone: '8792565877')
+@employee = Employee.create(email: 'drumlife182@gmail.com', password: 'drumlife', password_confirmation: 'drumlife', first_name: 'Alex', last_name: 'Vlasov', phone: '8792565877', ssn: 1234, company: 'ABC Company')
 
 p '1 User created'
 
-AdminUser.create(email: 'anastasiya.jj@gmail.com', password: 'asdfasdf', password_confirmation: 'asdfasdf',
-                 first_name: 'Admin', last_name: 'User', phone: '8792565877')
+AdminUser.create(email: 'anastasiya.jj@gmail.com', password: 'asdfasdf', password_confirmation: 'asdfasdf', first_name: 'Admin', last_name: 'User', phone: '8792565877', ssn: 1234, company: 'ABC Company')
 
 p '1 Admin user created'
 

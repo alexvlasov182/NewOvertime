@@ -11,6 +11,8 @@ FactoryGirl.define do
     password { 'drumlife' }
     password_confirmation { 'drumlife' }
     phone { '55555555555' }
+    ssn 1234
+    company 'ABC Company'
   end
 
   factory :admin_user, class: 'AdminUser' do
@@ -20,6 +22,8 @@ FactoryGirl.define do
     password { 'admin@admin' }
     password_confirmation { 'admin@admin' }
     phone { '55555555555' }
+    ssn 1234
+    company 'ABC Company'
   end
 
   factory :non_authorized_user, class: 'User' do
@@ -29,5 +33,7 @@ FactoryGirl.define do
     password { 'admin@admin' }
     password_confirmation { 'admin@admin' }
     phone { '55555555555' }
+    ssn 1234
+    company 'ABC Company'
   end
 end
