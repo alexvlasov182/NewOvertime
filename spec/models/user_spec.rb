@@ -33,7 +33,7 @@ RSpec.describe User, type: :model do
       @user.phone = 'mygreatstr'
       expect(@user).to_not be_valid
     end
-    
+     
     it 'requires the ssn attr' do
       @user.ssn = nil
       expect(@user).to_not be_valid
