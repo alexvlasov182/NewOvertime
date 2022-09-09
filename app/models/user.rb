@@ -16,9 +16,9 @@ class User < ApplicationRecord
   PHONE_REGEX = /\A[0-9]*\Z/.freeze
 
   validates_format_of :phone, with: PHONE_REGEX
-  validates :phone, length: {is: 10}
-  validates :ssn, length: {is: 4}
-  validates_numericality_of :ssn
+  #validates :phone, length: {is: 10}
+  #validates :ssn, length: {is: 4}
+  #validates_numericality_of :ssn
 
 
   def full_name
