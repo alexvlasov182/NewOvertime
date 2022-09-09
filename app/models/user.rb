@@ -21,7 +21,3 @@ class User < ApplicationRecord
     "#{last_name.upcase}, #{first_name.upcase}"
   end
 end
-
-
-
-admin = AdminUser.create!(email: "admin@test123.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: 'John', last_name: 'Doe', phone: '5555555555')
